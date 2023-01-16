@@ -580,6 +580,7 @@ def process_command_line():
         args.outfile = [code_file]
 
     if not args.only_test_for_changes:
+        processed_code = processed_code.replace("\r", "")
         if not args.outfile:
             print(processed_code, end="")
         else:
